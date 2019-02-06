@@ -1,0 +1,33 @@
+{
+  "name": "UserService",
+  "version": "1.0.0",
+  "description": "Cloud Test, a nodejs backend having 2 API's, Login, Registration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "test cloud"
+  },
+  "repository": {
+    "type": "git",
+    "url": "my repo"
+  },
+  "keywords": [
+    "User",
+    "Registration",
+    "User",
+    "Login"
+  ],
+  "author": "Kishore Annam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.4.0",
+    "log4js": "^4.0.2",
+    "mongodb": "^3.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

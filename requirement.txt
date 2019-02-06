@@ -1,0 +1,43 @@
+-----------------------------Test PDF------------
+
+Lantronix Cloud Engineer Test
+
+Implement the below API
+    (a)User Register
+    (b)User login
+
+Choose Database of your choice. Make sure the two APIs have enough
+   Logging
+   Error Handling
+   Comments
+   Unit test
+   Documentation
+
+API Request data Response data
+POST /user/register
+    {
+        "username": "string",
+        "firstname": "string",
+        "lastname": "string",
+        "email": "string",
+        "password": "string",
+    }
+    {
+        "message": "A verification mail has been sent to your registered mail."
+    }
+
+POST /user/login
+    {
+        "username": "string",
+        "password": "string",
+    }
+    {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJp",
+        "user": {
+            "id": "34c12b02-49a2-4dba-bf74-6d421ea75a8f",
+            "username": "string",
+            "email": "string",
+            "firstname": "string",
+            "lastname": "string"
+        }
+    }
