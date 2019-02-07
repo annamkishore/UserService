@@ -1,26 +1,18 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../index');
-const expect = chai.expect;
+const mocha = require('mocha');
 
-chai.use(chaiHttp);
+describe('UserService Backend App unittest', () => {
+  chai.use(chaiHttp);
+  const expect = chai.expect;
+  const agent = chai.request(server);
 
-describe('app', () => {
-
-  const agent = chai.request.agent(server);
-
-  it('Login test', (done) => {
-    agent
-      .post('/user/login')
-      .set('Content-Type', 'application/json')
-      .send({username: 'kish1', password: 'kish2'})
-      .end((req, res) => {
-        expect(res).to.have.status(200);
-        done();
-      });
+  before((done) => {
+    setTimeout(() => done(), 5000);
   });
 
-  it('Registration test', () => {
+  it('Registration & Login test', (done) => {
     let user = {
       "username": "kishoreannam",
       "firstname": "kishore",
@@ -33,6 +25,15 @@ describe('app', () => {
       .post('/user/register')
       .set('Content-Type', 'application/json')
       .send(user)
+      .end((req, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+
+    agent
+      .post('/user/login')
+      .set('Content-Type', 'application/json')
+      .send({username: 'kishoreannam', password: 'hello123'})
       .end((req, res) => {
         expect(res).to.have.status(200);
         done();

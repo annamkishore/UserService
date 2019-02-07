@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "test": "mocha server/tests"
+    "starthot": "nodemon server",
+    "test": "mocha --timeout 100000 server/tests"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,6 @@
   "keywords": [
     "User",
     "Registration",
-    "User",
     "Login"
   ],
   "author": "Kishore Annam",
