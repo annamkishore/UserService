@@ -42,13 +42,14 @@ How to consume the API
                 }
             }
 
-Technologies used
+Technologies used (version info inside parenthesis)
 
-    * Node.js - development platform
+    * Node.js (v10.13.0) - development platform
+    * MongoDB (4.0.2) - Database
     * ExpressJS - web server
-    * MongoDB - Database
     * Joi - validation library
     * Mocha, Chai - unit testing framework
+    (node modules version available in package.json)
     
 How to start the service
 
