@@ -47,6 +47,7 @@ Technologies used
     * Node.js - development platform
     * ExpressJS - web server
     * MongoDB - Database
+    * Joi - validation library
     * Mocha, Chai - unit testing framework
     
 How to start the service
@@ -66,6 +67,14 @@ How to execute unit tests
 
     * npm test
 
+Validations
+
+    * username - length 3 to 30, alphanumeric
+    * password - length 3 to 30, alpha/numeric
+    * firstname - length 2 to 30, alpha
+    * lastname - length 2 to 30, alpha
+    * email - usual email validation
+
 How to configure
 
-    * config.js file contains the configuratble items to customize for the target environment
+    * config.js - contains the configuratble items to customize for the target environment
