@@ -15,18 +15,18 @@ describe('app', () => {
       .set('Content-Type', 'application/json')
       .send({username: 'kish1', password: 'kish2'})
       .end((req, res) => {
-        expect(res).to.have.status(400);
+        expect(res).to.have.status(200);
         done();
       });
   });
 
   it('Registration test', () => {
     let user = {
-      "username": "string",
-      "firstname": "string",
-      "lastname": "string",
-      "email": "string",
-      "password": "string",
+      "username": "kishoreannam",
+      "firstname": "kishore",
+      "lastname": "annam",
+      "email": "kishore@gmail.com",
+      "password": "hello123",
     };
 
     agent
