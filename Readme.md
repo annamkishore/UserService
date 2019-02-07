@@ -1,12 +1,12 @@
 
-#UserService
+# UserService
 
 A Node.js Backend service, contains 2 API's
 
     * Register Service - new user can register by consuming this service
     * Login Service - existing user can login by consuming this service
 
-How to consume the API
+## How to consume the API
 
     * Register Service
         * POST http://localhost:3000/user/register
@@ -42,7 +42,7 @@ How to consume the API
                 }
             }
 
-Technologies used (version info inside parenthesis)
+## Technologies used (version info inside parenthesis)
 
     * Node.js (v10.13.0) - development platform
     * MongoDB (4.0.2) - Database
@@ -51,7 +51,7 @@ Technologies used (version info inside parenthesis)
     * Mocha, Chai - unit testing framework
     (node modules version available in package.json)
     
-How to start the service
+## How to start the service
 
     * MongoDB to be available at the given host:port
         * default: mongodb://localhost:52061/userdb
@@ -64,11 +64,11 @@ How to start the service
     * npm run starthot
         * Hot Reloads the application, i.e no need to restart the server while development. 
     
-How to execute unit tests
+## How to execute unit tests
 
     * npm test
 
-Validations
+## Validations
 
     * username - length 3 to 30, alphanumeric
     * password - length 3 to 30, alpha/numeric
@@ -76,6 +76,6 @@ Validations
     * lastname - length 2 to 30, alpha
     * email - usual email validation
 
-How to configure
+## How to configure
 
     * config.js - contains the configuratble items to customize for the target environment
