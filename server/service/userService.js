@@ -51,7 +51,7 @@ async function register(user) {
   } else {
     userDao.addUser(user);
     emailService.sendMail(user.email);
-    log.info("User: ${user.username}, registered, also sent verification email");
+    log.info(`User: ${user.username}, registered, also sent verification email`);
     return {
       message: "A verification mail has been sent to your registered mail."
     }
