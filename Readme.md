@@ -55,8 +55,10 @@ A Node.js Backend service, contains 2 API's
 
     * MongoDB to be available at the given host:port
         * default: mongodb://localhost:52061/userdb
-    * application port
+    * Application port
         * default: 3000
+    * npm install
+        * to install required packages
     * npm start
         * once application started
         * services can be verified as below
