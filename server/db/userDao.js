@@ -1,6 +1,12 @@
 const db = require('../db');
 const errors = require('../errors');
 
+/**
+ *
+ * Data accessing functionality, serves as DAO layer for the application.
+ *
+ */
+
 const userCollection = 'user';
 
 const addUser = async (user) => {

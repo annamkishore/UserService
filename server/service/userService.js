@@ -39,7 +39,15 @@ const login = async (username, password) => {
   };
 };
 
-async function register(user) {
+/**
+ * register service:
+ *          - Adds the user in the user database (or) sends errorMessage if exists
+ *          - A verification Email is sent to the user once user is added to the database
+ *
+ * @param user
+ * @returns {Promise<*>}
+ */
+const register = async (user) => {
   log.debug('entered register() service');
   let userFound = await userDao.isUserExists(user.username);
   if (userFound) {
@@ -56,7 +64,7 @@ async function register(user) {
       message: "A verification mail has been sent to your registered mail."
     }
   }
-}
+};
 
 module.exports = {
   login,

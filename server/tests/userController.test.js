@@ -2,6 +2,10 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
 
+/**
+ * Unit Tests for User Controller
+ */
+
 describe('UserService: Backend App unittest', () => {
   chai.use(chaiHttp);
   const expect = chai.expect;

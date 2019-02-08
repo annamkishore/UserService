@@ -3,6 +3,10 @@ const log = require('../logger');
 const jwt = require('jsonwebtoken');
 const config = require('../config');
 
+/**
+ * Validations across the application goes here, using the Joi NPM Module
+ */
+
 const loginSchema = {
   username: Joi.string().alphanum().min(3).max(30).required(),
   password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
